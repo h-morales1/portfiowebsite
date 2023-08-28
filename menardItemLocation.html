@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+                     initial-scale=1.0">
+  <title>HMDEV</title>
+  <link rel="stylesheet" href="prism.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <!-- navbar section -->
+ <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">HMDEV</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="https://github.com/h-morales1/" class="navbar__links">Github</a>
+        </li>
+        <li class="navbar__item">
+          <a href="https://gitlab.com/Holzelh" class="navbar__links">Gitlab</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- project -->
+  <div class="proj_main">
+    <div class="proj_container">
+      <div class="proj_content">
+
+  <!-- project TITLE -->
+        <h1>Menards item location app</h1>
+        <p>
+          <a href="https://github.com/h-morales1/mlScanner/tree/img_analyzer_implementation">Project Repo</a>
+        </p>
+        <p>Tech Used:</p>
+
+  <!-- project Tech used -->
+        <p>Kotlin / SQL / Google Machine Learning Kit</p>
+        <br>
+        <br>
+        <br>
+  <!-- project Explanation -->
+        <h2>What does the project do?</h2>
+        <p>Use machine learning to scan a Menards bin tag and save its location to a database.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="proj_img_container">
+        <img src="mlScanner/mainMenu.png" alt="pic" id="proj__img">
+        </div>
+
+        <p>
+          The android application begins with a basic main menu. Clicking any of the buttons will load a new activity or screen. Clicking the 
+          Scan Item button will open up a custom camera view, utilizing the Google Machine Learning Kit, the app is able to scan the barcode 
+          on a bin tag, read the sku and ignore the rest of the text on the tag. If it does detect the barcode, then the scan is considered 
+          a success and the next activity is loaded. This is a form that is prefilled with the sku and barcode from the bin tag.
+        </p>
+
+
+        <div class="proj_img_container">
+        <img src="mlScanner/scanItem.png" alt="pic" id="proj__img">
+        </div>
+
+        <p>
+          The above is the form to be filled after a successful scan of a bin tag. The app is able to actively scan the current view of the 
+          camera for specific data, such as the sku and barcode. It doesn't need to take a picture, save it and process that image. The only 
+          data the user needs to fill in is the location field at the very bottom. If the user is trying to quickly add a bunch of items from 
+          one aisle section to the database, there is a Mass Add button, which allows the user to enter in a location and scan items until 
+          the user hits a button. The idea in the end was to be able to take a single very high resolution picture of bin tags in an aisle 
+          and be able to bulk add items in that way.
+        </p>
+
+        <div class="proj_img_container">
+        <img src="mlScanner/searchSku.png" alt="pic" id="proj__img">
+        </div>
+
+        <p>
+          Clicking the Search Sku button will load an activity where the user can enter in a sku. The app will use the sku to search the database 
+          and it will change the activity to display the data on the sku if it is found, if not then a toast message is displayed, letting the user 
+          know that the sku is not in the current database.
+        </p>
+
+
+       
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="services">
+
+  </div>
+
+  <script src="app.js"></script>
+  <script src="prism.js"></script>
+</body>
+
+</html>
